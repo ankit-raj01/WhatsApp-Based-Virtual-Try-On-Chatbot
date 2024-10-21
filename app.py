@@ -186,4 +186,4 @@ def process_virtual_try_on(human_image, garment_image):
 
 if __name__ == "__main__":
     os.makedirs('images', exist_ok=True)
-    app.run(port=5000, debug=True)
+    app.run(port=10000, debug=True)
