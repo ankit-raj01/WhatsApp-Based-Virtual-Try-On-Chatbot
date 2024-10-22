@@ -33,16 +33,16 @@ def whatsapp():
             user_data[sender_id] = {}
         if 'human_image' not in user_data[sender_id]:
             user_data[sender_id]['human_image'] = media_url 
-            response.message('Person image received. Now, please upload the garment image you want to try-on.')
+            response.message("Great! The image is uploaded successfully. Now, let's pick an outfit. Please upload a picture of the garment you'd like to try on.")
         elif 'garment_image' not in user_data[sender_id]:
             user_data[sender_id]['garment_image'] = media_url  
-            response.message('Garment image received. The try-on result is being processed. Please give us around a minute.')
+            response.message("Perfect! We've got the outfit. Give us about a minute to create the virtual look.")
             threading.Thread(target = handle_try_on, args = (sender_id, user_data[sender_id]['human_image'], media_url)).start()
             user_data.pop(sender_id, None)
         else:
             response.message('You have already uploaded both images. Please wait for the result.')
     else:
-        response.message('Welcome to Virtual Try-On. To proceed please upload a person image first.')
+        response.message("Welcome to virtual try-on! To begin, please upload a photo of the person you'd like to try the outfit on.")
     return str(response)
 
 
