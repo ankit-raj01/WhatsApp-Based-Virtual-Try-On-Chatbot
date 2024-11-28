@@ -1,3 +1,8 @@
+<a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank">
+    <img src="https://youtube.com/shorts/UCFMPjDufNQ" alt="Watch the video" style="width:100%; max-width:600px;">
+</a>
+
+
 This project showcases an innovative solution that integrates machine learning and messaging technologies, deployed on Render for scalability and reliability. By combining a Hugging Face space model with Twilio’s API for WhatsApp, the system allows users to visualize themselves in desired garments through an intuitive chatbot interface. This application demonstrates the potential of AI-driven tools in revolutionizing user experiences, particularly in fashion and e-commerce.
 
 The process begins with user interaction on WhatsApp, where a chatbot powered by Twilio facilitates step-by-step guidance. Users are prompted to upload an image of themselves, followed by an image of the garment they wish to try on. Once both images are uploaded, they are processed by a pre-trained Hugging Face model hosted on Gradio. This model generates a photorealistic composite image of the user wearing the selected outfit, showcasing the advanced capabilities of virtual try-on technology. The resulting image is then uploaded to Google Drive using the Google API, with public sharing enabled via a unique link. The final step involves the chatbot, using Twilio’s API, to deliver this image back to the user on WhatsApp, completing the interaction and providing a polished, professional result.
